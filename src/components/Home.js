@@ -6,6 +6,9 @@ import Header from './Header';
 
 const Container = styled.div`
     height: 100vh;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
 `
 
 const Home = () => {

@@ -8,6 +8,7 @@ import TeslaAccount from './components/TeslaAccount';
 import { useDispatch } from 'react-redux';
 import { login, logout } from './features/userSlice';
 import { auth } from './firebase';
+// import Car from './components/Car';
 
 function App() {
 
@@ -18,9 +19,9 @@ function App() {
       if (userAuth) {
         dispatch(
           login({
-            email: userAuth.user.email,
-            uid: userAuth.user.uid,
-            displayName: userAuth.user.displayName
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName
           }))
       } else {
         dispatch(logout())
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/teslaaccount" element={<TeslaAccount />} />
+        {/* <Route path='/model' element={<Car />} /> */}
       </Routes>
     </div>
 

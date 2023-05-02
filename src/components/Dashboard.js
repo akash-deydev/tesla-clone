@@ -27,12 +27,15 @@ const LeftContainer = styled.div`
         display: flex;
         align-items: center;
         gap: 20px;
-        margin-bottom: 40px;
+        padding: 10px 10px;
+        border-radius: 4px;
+        margin-bottom: 20px;
         cursor: pointer;
         font-size: 20px;
     }
-    @media(max-width: 768px) {
-        display: none;
+
+    div:hover {
+        background-color: #f4f4f4;
     }
 `
 

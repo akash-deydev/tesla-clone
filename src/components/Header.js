@@ -24,8 +24,14 @@ const Menu = styled.div`
 
     a{
         font-weight: 600;
-        padding: 0 10px;
+        padding: 5px 10px;
+        border-radius: 4px;
         flex-wrap: nowrap;
+        transition: 0.3s ease-in-out;
+    }
+
+    a:hover {
+        background-color: #f4f4f4;
     }
 
 
@@ -40,13 +46,19 @@ const RightMenu = styled.div`
     align-items: center;
 
     a{
+        border-radius: 4px;
         font-weight: 600;
-        padding: 0 10px;
+        padding: 5px 10px;
         flex-wrap: nowrap;
+        transition: 0.3s ease-in-out;
+    }
+
+    a:hover{
+        background-color: #f4f4f4;
     }
 
     @media(max-width: 768px) {
-        display: none;
+       
     }
 `
 
@@ -71,12 +83,17 @@ const SideNav = styled.div`
         a{
             font-weight: 600;
             padding: 10px;
+            transition: all .3s;
         }
 
         a:hover {
-            background: grey;
+            background: #f4f4f4;
             width: 256px;
             border-radius: 4px;
+        }
+
+        @media(max-width: 768px) {
+            width: 256px;
         }
     
 

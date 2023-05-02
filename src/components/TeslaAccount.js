@@ -30,8 +30,13 @@ const Menu = styled.div`
 
     a{
         font-weight: 600;
-        padding: 0 10px;
+        padding: 5px 10px;
+        border-radius: 4px;
         flex-wrap: nowrap;
+    }
+
+    a:hover{
+        background-color: #f4f4f4;
     }
 
 
@@ -47,8 +52,13 @@ const RightMenu = styled.div`
 
     a{
         font-weight: 600;
-        padding: 0 10px;
+        padding: 5px 10px;
+        border-radius: 4px;
         flex-wrap: nowrap;
+    }
+
+    a:hover{
+        background-color: #f4f4f4;
     }
 `
 
@@ -73,12 +83,12 @@ const SideNav = styled.div`
         a{
             font-weight: 600;
             padding: 10px;
+            border-radius: 4px;
         }
 
         a:hover {
-            background: grey;
+            background: #f4f4f4;
             width: 256px;
-            border-radius: 4px;
         }  
 `
 

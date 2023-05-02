@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Slide } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
+import { Link } from "react-router-dom";
 
 
 const Wrap = styled.div`
@@ -15,6 +16,7 @@ const Wrap = styled.div`
     justify-content: space-between;
     align-items: center;
     background-image: ${props => `url("images/${props.bgImage}")`};
+    scroll-snap-align: center;
 `
 
 const ItemText = styled.div`
@@ -69,22 +71,21 @@ const RightButton = styled(LeftButton)`
 const Section = ({ title, description, backgroundImg, leftBtn, rightBtn }) => {
     return (
         <Wrap bgImage={backgroundImg}>
-            <Slide direction='up'>
+            <Fade fraction={1}>
                 <ItemText>
                     <h1>{title}</h1>
                     <p>{description}</p>
                 </ItemText>
-            </Slide>
+            </Fade>
 
-            <Slide direction='up'>
+            <Fade fraction={1}>
                 <ButtonGroup>
-                    <LeftButton>{leftBtn}</LeftButton>
+                    <Link to="/model"><LeftButton>{leftBtn}</LeftButton></Link>
                     {
                         rightBtn && <RightButton>{rightBtn}</RightButton>
                     }
-
                 </ButtonGroup>
-            </Slide>
+            </Fade>
         </Wrap>
 
     )
